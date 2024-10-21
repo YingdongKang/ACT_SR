@@ -26,11 +26,11 @@ pip install -r requirements.txt
 - The training command is like
 ```
 # x4
-python ACT_SR/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
+python basicsr/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
 # x3
-python ACT_SR/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
+python basicsr/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
 # x2
-python ACT_SR/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
+python basicsr/train.py -opt options/train/train_ACTSR_SRx4_AID_scratch --launcher pytorch
 
 ```
 - Note that the default batch size per gpu is 12, which will cost about 22G memory for each GPU.
@@ -45,7 +45,7 @@ The training logs and weights will be saved in the `./experiments` folder.
 [Google Drive](https://drive.google.com/drive/folders/1qBIai0W-bsxpNKYbUiXpYQqDDVcDRgHH?usp=sharing) or [Baidu Netdisk](https://pan.baidu.com/s/1O-pTPH9Tdcfy17p4btNlFQ) (access code: rtc7).  
 - Then run the follwing codes (taking `ACT_SRx4_AID.pth` as an example):
 ```
-python ACT_SR/test.py -opt options/test/ACTSR_SRx4_AID.yml
+python basicsr/test.py -opt options/test/ACTSR_SRx4_AID.yml
 ```
 The testing results will be saved in the `./results` folder.  
 
